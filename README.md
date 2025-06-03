@@ -1,4 +1,4 @@
-# spring-jwt
+# 😊😊spring-jwt🎈🎈
 
 This is simple spring boot project and spring data jpa, postgresql,
 spring security, and JWT. The purpose is to use JWT.
@@ -9,15 +9,19 @@ these endpoints:
 
 1. baseURL: http://localhost:8080/api
 
-2. signin endpoint: ${baseURL}/auth/signin
-   signin using following json format
+2. signin endpoint: ${baseURL}/auth/signin.
+
+   Then signin with POST request using following json format in json body
+
    {
    "username": "user2",
    "password": "user2password"
    }
 
-3. signup endpoint: ${baseURL}/auth/signup
-   signup with following json format
+3. signup endpoint: ${baseURL}/auth/signup.
+
+   Then signup with POST request with following json format in json body
+
    {
    "username": "user2",
    "email": "user2@example.com",
@@ -27,3 +31,8 @@ these endpoints:
 
 4. admin endpoint: ${baseURL}/admin
 5. user endpoint: ${baseURL}/user
+
+When signed in, it gives JWT token in response in postman, copy that jwt token
+to get the user endpoint: Auth Type should be Bearer Token and paste jwt token in Token field.
+
+role is set like ["user"], ["user", "admin"], or ["admin"]
