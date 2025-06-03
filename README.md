@@ -2,9 +2,12 @@
 
 This is simple spring boot project and spring data jpa, postgresql,
 spring security, and JWT. The purpose is to use JWT.
+
 I have used .env file to save most secrets and load it through
 bash file(.sh file) and create corresponding constants in
-application.properties.I am using Postman for now to test
+application.properties. I am running ./ run.sh file to start maven.
+The empty database is created in postgreSQL before running.
+I am using Postman for now to test
 these endpoints:
 
 1. baseURL: http://localhost:8080/api
