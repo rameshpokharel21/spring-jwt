@@ -34,6 +34,8 @@ these endpoints:
 
 4. admin GET request endpoint: ${baseURL}/admin
 5. user GET request endpoint: ${baseURL}/user
+6. GET request for userdetails: ${baseURL}/auth/user
+7. POST request for logout: ${baseURL}/auth/signout with no json body
 
 When signed in, it gives cookie in response in postman,
 
