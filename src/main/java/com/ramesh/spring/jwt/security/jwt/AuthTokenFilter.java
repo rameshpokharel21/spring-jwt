@@ -35,8 +35,8 @@ public class AuthTokenFilter extends OncePerRequestFilter {
         logger.debug("AuthTokenFileter called for URI:{}", request.getRequestURI());
 
         try{
-            String jwt = jwtUtils.getJwtFromHeader(request);
-            logger.debug("AuthTokenFileter.java: {}", jwt);
+            String jwt = jwtUtils.getJwtFromCookie(request);
+            logger.debug("AuthTokenFilter.java: {}", jwt);
 
             if (jwt != null && jwtUtils.validateJwtToken(jwt)) {
                 String username = jwtUtils.getUsernameFromJwtToken(jwt);

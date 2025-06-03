@@ -13,7 +13,7 @@ import java.util.List;
 @Setter
 public class LoginResponse {
     private Long id;
-    private String jwtToken;
+    private String jwtCookie;
     private String username;
     private List<String> roles;
 

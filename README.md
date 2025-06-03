@@ -1,7 +1,7 @@
 # 😊😊spring-jwt🎈🎈
 
 This is simple spring boot project and spring data jpa, postgresql,
-spring security, and JWT. The purpose is to use JWT.
+spring security, and JWT with cookie. The purpose is to use JWT with cookie.
 
 I have used .env file to save most secrets and load it through
 bash file(.sh file) and create corresponding constants in
@@ -12,7 +12,7 @@ these endpoints:
 
 1. baseURL: http://localhost:8080/api
 
-2. signin endpoint: ${baseURL}/auth/signin.
+2. signin POST request endpoint: ${baseURL}/auth/signin.
 
    Then signin with POST request using following json format in json body
 
@@ -21,7 +21,7 @@ these endpoints:
    "password": "user2password"
    }
 
-3. signup endpoint: ${baseURL}/auth/signup.
+3. signup POST request endpoint: ${baseURL}/auth/signup.
 
    Then signup with POST request with following json format in json body
 
@@ -32,10 +32,9 @@ these endpoints:
    "password": "user2password"
    }
 
-4. admin endpoint: ${baseURL}/admin
-5. user endpoint: ${baseURL}/user
+4. admin GET request endpoint: ${baseURL}/admin
+5. user GET request endpoint: ${baseURL}/user
 
-When signed in, it gives JWT token in response in postman, copy that jwt token
-to get the user endpoint: Auth Type should be Bearer Token and paste jwt token in Token field.
+When signed in, it gives cookie in response in postman,
 
 role is set like ["user"], ["user", "admin"], or ["admin"]
