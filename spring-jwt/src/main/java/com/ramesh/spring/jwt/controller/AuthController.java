@@ -50,7 +50,7 @@ public class AuthController {
 
 
 //    @PreAuthorize("permitAll()")
-    @PostMapping("/signin")
+    @PostMapping("/login")
     public ResponseEntity<?> authenticateUser(@Valid @RequestBody LoginRequest loginRequest){
         Authentication authentication;
 
@@ -137,7 +137,7 @@ public class AuthController {
         return ResponseEntity.ok().body(response);
     }
 
-    @PostMapping("/signout")
+    @PostMapping("/logout")
     public ResponseEntity<?> signoutUser(){
         ResponseCookie cookie = jwtUtils.clearJwtCookie();
         return ResponseEntity.ok().header(HttpHeaders.SET_COOKIE, cookie.toString())
