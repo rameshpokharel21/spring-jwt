@@ -20,10 +20,7 @@ const SignUp = () => {
 
     try {
       const res = await api.post("/auth/signup", form);
-      setSuccess(
-        "Signup successfully! You can now log in. Status: ",
-        res.status
-      );
+      setSuccess("Signup successfully! You can now log in.");
       setForm({ username: "", email: "", password: "" });
     } catch (err) {
       setError(err.response?.data?.message || "Signup failed.");
